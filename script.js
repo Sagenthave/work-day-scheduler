@@ -1,13 +1,12 @@
 $(document).ready(function () {
-
-
-
+// shows present day 
   var currentDay= $('#currentDay') 
   currentDay.text(dayjs().format('dddd MMMM DD YYYY'));
   // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
   // the code isn't run until the browser has finished rendering all the elements
   // in the html.
 
+  // loop for timeslots
   for (var i = 9; i <= 16; i++) {
     var time = $(
       `<div id="hour${i}" class="row time-block present">
@@ -27,6 +26,8 @@ $(document).ready(function () {
   //   $('.description').attr.('color', 'pink')
   // }
 
+
+// pushes data into local storage
   $(document).on({ "click": function () {
       const hour = $(this).siblings(".hour").text();
       const text = $(this).siblings(".textvalue").val();
@@ -65,7 +66,7 @@ $(document).ready(function () {
 
 
 
-
+// get items from local storage and keeps them on screen
   function getFunction () {
     $('.hour').each(function(){
       var hour = $(this).text();
