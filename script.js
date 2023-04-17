@@ -64,21 +64,15 @@ $(document).ready(function () {
 
 
 
-  // $(".time-block").each(function() {
-  //   var timeID = $(this).attr("id")
-  //   var textArea = localStorage.getItem(timeID)
-  //   if (textArea) {
-  //     $(this).find("textarea").val(textArea)
-  //   }
-  // })
+
 
   function getFunction () {
-    $('.col-2 col-md-1 hour text-center py-3').each(function(){
+    $('.hour').each(function(){
       var hour = $(this).text();
       var text = localStorage.getItem(hour);
-
+console.log(text)
       if(text !== null) {
-        $(this).siblings('.description').val()
+        $(this).siblings('.description').val(text)
       }
     })
 
