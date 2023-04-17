@@ -21,6 +21,12 @@ $(document).ready(function () {
       $('#container').append(time);
   }
 
+  // var time = dayjs().format('h')
+
+  // if (time = (dayjs().format('h'))) {
+  //   $('.description').attr.('color', 'pink')
+  // }
+
   $(document).on({ "click": function () {
       const hour = $(this).siblings(".hour").text();
       const text = $(this).siblings(".textvalue").val();
@@ -55,6 +61,16 @@ $(document).ready(function () {
   //   //
   //   // TODO: Add code to display the current date in the header of the page.
   //});
+
+
+
+  // $(".time-block").each(function() {
+  //   var timeID = $(this).attr("id")
+  //   var textArea = localStorage.getItem(timeID)
+  //   if (textArea) {
+  //     $(this).find("textarea").val(textArea)
+  //   }
+  // })
 
   function getFunction () {
     $('.col-2 col-md-1 hour text-center py-3').each(function(){
